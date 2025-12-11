@@ -7,15 +7,19 @@ public partial class Log
 {
     public int Id { get; set; }
 
-    public string Owner { get; set; } = null!;
+    public string UserId { get; set; } = null!;
 
     public DateTime DateTime { get; set; }
 
-    public byte Type { get; set; }
+    public byte TypeId { get; set; }
 
-    public string Description { get; set; } = null!;
+    public string? Description { get; set; }
 
-    public virtual User OwnerNavigation { get; set; } = null!;
+    public int? EventId { get; set; }
 
-    public virtual ActionType TypeNavigation { get; set; } = null!;
+    public virtual Event? Event { get; set; }
+
+    public virtual ActionType Type { get; set; } = null!;
+
+    public virtual User User { get; set; } = null!;
 }

@@ -13,6 +13,8 @@ using EventPlannerServer.Services;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<EventPlannerServer.Services.IAuthorizationService, AuthorizationService>();
+builder.Services.AddScoped<ILoggerService, LoggerService>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
         options.TokenValidationParameters = new TokenValidationParameters
         {

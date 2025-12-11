@@ -7,7 +7,7 @@ public partial class User
 {
     public string Login { get; set; } = null!;
 
-    public byte Role { get; set; }
+    public byte RoleId { get; set; }
 
     public string Password { get; set; } = null!;
 
@@ -15,5 +15,5 @@ public partial class User
 
     public virtual ICollection<Log> Logs { get; set; } = new List<Log>();
 
-    public virtual Role RoleNavigation { get; set; } = null!;
+    public virtual Role Role { get; set; } = null!;
 }

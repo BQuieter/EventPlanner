@@ -7,15 +7,17 @@ public partial class Event
 {
     public int Id { get; set; }
 
-    public string Owner { get; set; } = null!;
+    public string UserId { get; set; } = null!;
 
     public DateTime DateTime { get; set; }
 
-    public byte Importance { get; set; }
+    public byte ImportanceId { get; set; }
 
     public string Description { get; set; } = null!;
 
-    public virtual EventImportance ImportanceNavigation { get; set; } = null!;
+    public virtual EventImportance Importance { get; set; } = null!;
 
-    public virtual User OwnerNavigation { get; set; } = null!;
+    public virtual ICollection<Log> Logs { get; set; } = new List<Log>();
+
+    public virtual User User { get; set; } = null!;
 }

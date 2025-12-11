@@ -41,19 +41,19 @@ public partial class EventPlannerDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Events__3214EC07BAE8AC4E");
 
-            entity.Property(e => e.DateTime).HasColumnType("smalldatetime");
+            entity.Property(e => e.DateTime).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(200);
-            entity.Property(e => e.Owner)
+            entity.Property(e => e.UserId)
                 .HasMaxLength(20)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.ImportanceNavigation).WithMany(p => p.Events)
-                .HasForeignKey(d => d.Importance)
+            entity.HasOne(d => d.Importance).WithMany(p => p.Events)
+                .HasForeignKey(d => d.ImportanceId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Events__Importan__5FB337D6");
 
-            entity.HasOne(d => d.OwnerNavigation).WithMany(p => p.Events)
-                .HasForeignKey(d => d.Owner)
+            entity.HasOne(d => d.User).WithMany(p => p.Events)
+                .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Events__Owner__5EBF139D");
         });
@@ -72,19 +72,23 @@ public partial class EventPlannerDbContext : DbContext
 
             entity.Property(e => e.DateTime).HasColumnType("smalldatetime");
             entity.Property(e => e.Description).HasMaxLength(200);
-            entity.Property(e => e.Owner)
+            entity.Property(e => e.UserId)
                 .HasMaxLength(20)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.OwnerNavigation).WithMany(p => p.Logs)
-                .HasForeignKey(d => d.Owner)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Logs__Owner__6477ECF3");
+            entity.HasOne(d => d.Event).WithMany(p => p.Logs)
+                .HasForeignKey(d => d.EventId)
+                .HasConstraintName("FK__Logs__EventId__72C60C4A");
 
-            entity.HasOne(d => d.TypeNavigation).WithMany(p => p.Logs)
-                .HasForeignKey(d => d.Type)
+            entity.HasOne(d => d.Type).WithMany(p => p.Logs)
+                .HasForeignKey(d => d.TypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Logs__Type__656C112C");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Logs)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Logs__Owner__6477ECF3");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -105,10 +109,10 @@ public partial class EventPlannerDbContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(64)
                 .IsUnicode(false);
-            entity.Property(e => e.Role).HasDefaultValue((byte)2);
+            entity.Property(e => e.RoleId).HasDefaultValue((byte)2);
 
-            entity.HasOne(d => d.RoleNavigation).WithMany(p => p.Users)
-                .HasForeignKey(d => d.Role)
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
+                .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Users__Role__4CA06362");
         });

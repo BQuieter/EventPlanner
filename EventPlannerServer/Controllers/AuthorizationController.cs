@@ -11,10 +11,12 @@ namespace EventPlannerServer.Controllers
     public class AuthorizationController: ControllerBase
     {
         private IAuthorizationService authorizationService;
+        private ILoggerService loggerService;
 
-        public AuthorizationController(IAuthorizationService authorizationService)
+        public AuthorizationController(IAuthorizationService authorizationService, ILoggerService loggerService)
         {
             this.authorizationService = authorizationService;
+            this.loggerService = loggerService;
         }
 
         [HttpPost("login")]
@@ -25,6 +27,8 @@ namespace EventPlannerServer.Controllers
             var result = authorizationService.Authorization(request.Login, request.Password);
             if (!result.Item1)
                 return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
+
+            loggerService.Log(request.Login, ActionTypes.Login, null, null);
             return Ok(ApiResponse<JWTResponse>.Ok(new() { Login = request.Login, JWT = result.Item2}));
         }
 
@@ -36,6 +40,9 @@ namespace EventPlannerServer.Controllers
             var result = authorizationService.Registration(request.Login, request.Password);
             if (!result.Item1)
                 return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
+
+            await loggerService.Log(request.Login, ActionTypes.Register, null, null);
+           // return Redirect("https://localhost:7100/api/authorization/login");
             return Ok(ApiResponse<JWTResponse>.Ok(new() { Login = request.Login, JWT = result.Item2 }));
         }
     }
