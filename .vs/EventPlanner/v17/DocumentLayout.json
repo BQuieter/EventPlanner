@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8F40D485-CB3F-498D-B61F-86384C414A8A}|TestServer\\TestServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\testserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F40D485-CB3F-498D-B61F-86384C414A8A}|TestServer\\TestServer.csproj|solutionrelative:testserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\authoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\authoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\services\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\services\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +42,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\appsettings.json",
-              "RelativeDocumentMoniker": "EventPlannerServer\\appsettings.json",
-              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\appsettings.json",
-              "RelativeToolTip": "EventPlannerServer\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-10T15:09:09.825Z",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\TestServer\\Program.cs",
+              "RelativeDocumentMoniker": "TestServer\\Program.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\TestServer\\Program.cs",
+              "RelativeToolTip": "TestServer\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T23:28:36.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "AuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Services\\AuthorizationService.cs",
+              "RelativeDocumentMoniker": "EventPlannerServer\\Services\\AuthorizationService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Services\\AuthorizationService.cs",
+              "RelativeToolTip": "EventPlannerServer\\Services\\AuthorizationService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA/wBkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T22:23:17.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Services\\IAuthorizationService.cs",
+              "RelativeDocumentMoniker": "EventPlannerServer\\Services\\IAuthorizationService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Services\\IAuthorizationService.cs",
+              "RelativeToolTip": "EventPlannerServer\\Services\\IAuthorizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T22:01:51.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthorizationController.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Controllers\\AuthorizationController.cs",
+              "RelativeDocumentMoniker": "EventPlannerServer\\Controllers\\AuthorizationController.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Controllers\\AuthorizationController.cs",
+              "RelativeToolTip": "EventPlannerServer\\Controllers\\AuthorizationController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T21:59:44.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthOptions.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\AuthOptions.cs",
+              "RelativeDocumentMoniker": "EventPlannerServer\\AuthOptions.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\AuthOptions.cs",
+              "RelativeToolTip": "EventPlannerServer\\AuthOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T21:40:50.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Program.cs",
               "RelativeDocumentMoniker": "EventPlannerServer\\Program.cs",
               "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Program.cs",
               "RelativeToolTip": "EventPlannerServer\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwCIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T14:34:50.748Z",
               "EditorCaption": ""

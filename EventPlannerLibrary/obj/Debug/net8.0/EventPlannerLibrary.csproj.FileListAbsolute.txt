@@ -1,0 +1,12 @@
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\bin\Debug\net8.0\EventPlannerLibrary.deps.json
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\bin\Debug\net8.0\EventPlannerLibrary.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\bin\Debug\net8.0\EventPlannerLibrary.pdb
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.AssemblyInfoInputs.cache
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.AssemblyInfo.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.sourcelink.json
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\refint\EventPlannerLibrary.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\EventPlannerLibrary.pdb
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerLibrary\obj\Debug\net8.0\ref\EventPlannerLibrary.dll

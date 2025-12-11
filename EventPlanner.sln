@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventPlannerServer", "EventPlannerServer\EventPlannerServer.csproj", "{C488F72B-05D8-477A-83A9-ECFBC0F6D376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventPlannerLibrary", "EventPlannerLibrary\EventPlannerLibrary.csproj", "{239CFF90-72D6-4807-9B9C-3B5B19047E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServer", "TestServer\TestServer.csproj", "{8F40D485-CB3F-498D-B61F-86384C414A8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C488F72B-05D8-477A-83A9-ECFBC0F6D376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C488F72B-05D8-477A-83A9-ECFBC0F6D376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C488F72B-05D8-477A-83A9-ECFBC0F6D376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239CFF90-72D6-4807-9B9C-3B5B19047E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239CFF90-72D6-4807-9B9C-3B5B19047E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239CFF90-72D6-4807-9B9C-3B5B19047E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239CFF90-72D6-4807-9B9C-3B5B19047E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F40D485-CB3F-498D-B61F-86384C414A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F40D485-CB3F-498D-B61F-86384C414A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F40D485-CB3F-498D-B61F-86384C414A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F40D485-CB3F-498D-B61F-86384C414A8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

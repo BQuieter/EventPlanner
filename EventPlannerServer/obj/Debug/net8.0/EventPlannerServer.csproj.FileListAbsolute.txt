@@ -141,3 +141,8 @@ C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\obj\Debug\net8.0\Ev
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\obj\Debug\net8.0\ref\EventPlannerServer.dll
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\EventPlannerLibrary.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\bin\Debug\net8.0\EventPlannerLibrary.pdb
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerServer\obj\Debug\net8.0\EventPlannerServer.sourcelink.json
