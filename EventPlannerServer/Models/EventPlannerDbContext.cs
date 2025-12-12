@@ -41,7 +41,7 @@ public partial class EventPlannerDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Events__3214EC07BAE8AC4E");
 
-            entity.Property(e => e.DateTime).HasColumnType("datetime");
+            entity.Property(e => e.DateTime).HasColumnType("smalldatetime");
             entity.Property(e => e.Description).HasMaxLength(200);
             entity.Property(e => e.UserId)
                 .HasMaxLength(20)
@@ -70,7 +70,7 @@ public partial class EventPlannerDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Logs__3214EC074D806094");
 
-            entity.Property(e => e.DateTime).HasColumnType("smalldatetime");
+            entity.Property(e => e.DateTime).HasColumnType("datetime");
             entity.Property(e => e.Description).HasMaxLength(200);
             entity.Property(e => e.UserId)
                 .HasMaxLength(20)

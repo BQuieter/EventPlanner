@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "EventPlannerServer.Controllers.AuthorizationController",
-    "Method": "Authorization",
+    "Method": "Login",
     "RelativePath": "api/Authorization/login",
     "HttpMethod": "POST",
     "IsController": true,

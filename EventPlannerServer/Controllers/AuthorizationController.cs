@@ -20,16 +20,11 @@ namespace EventPlannerServer.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<ApiResponse<JWTResponse>>> Authorization(AuthorizationUserRequest request)
+        public async Task<ActionResult<ApiResponse<JWTResponse>>> Login(AuthorizationUserRequest request)
         {
             if (!Validator<AuthorizationUserRequest>.IsValid(request))
                 return BadRequest(request);
-            var result = authorizationService.Authorization(request.Login, request.Password);
-            if (!result.Item1)
-                return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
-
-            loggerService.Log(request.Login, ActionTypes.Login, null, null);
-            return Ok(ApiResponse<JWTResponse>.Ok(new() { Login = request.Login, JWT = result.Item2}));
+            return await Authorization(request);
         }
 
         [HttpPost("register")]
@@ -42,7 +37,16 @@ namespace EventPlannerServer.Controllers
                 return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
 
             await loggerService.Log(request.Login, ActionTypes.Register, null, null);
-           // return Redirect("https://localhost:7100/api/authorization/login");
+            return await Authorization(request);
+        }
+
+        private async Task<ActionResult<ApiResponse<JWTResponse>>> Authorization(AuthorizationUserRequest request)
+        {
+            var result = authorizationService.Authorization(request.Login, request.Password);
+            if (!result.Item1)
+                return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
+
+            loggerService.Log(request.Login, ActionTypes.Login, null, null);
             return Ok(ApiResponse<JWTResponse>.Ok(new() { Login = request.Login, JWT = result.Item2 }));
         }
     }
