@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventPlannerServer.Models;
 
@@ -8,7 +7,8 @@ public partial class Log
 {
     public int Id { get; set; }
 
-    public string UserId { get; set; } = null!;
+    public int UserId { get; set; }
+
     public DateTime DateTime { get; set; }
 
     public byte TypeId { get; set; }

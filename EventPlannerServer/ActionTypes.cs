@@ -7,6 +7,7 @@ namespace EventPlannerServer
         public const string Login = "Вход";
         public const string Register = "Регистрация";
         public const string EventCreated = "Создание события";
+        public const string EventEdited = "Изменение события";
         public const string EventDeleted = "Удаление события";
     }
 }

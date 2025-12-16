@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventPlannerServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e8c6c9ae3d2993615074dc9e5c94693218ad39e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a600d489dbb465cc8beca44c8e8873f8903b9f5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventPlannerServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventPlannerServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventPlannerServer.Models;
+namespace EventPlannerServer.Models2;
 
 public partial class EventPlannerDbContext : DbContext
 {
@@ -29,6 +29,7 @@ public partial class EventPlannerDbContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+  
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ActionType>(entity =>

@@ -20,7 +20,7 @@ namespace EventPlannerServer.Services
             byte? action = dbContext.ActionTypes.ToList().First((action) => action.Name == actionName).Id;
             if (action is null) 
                 return;
-            var log = new Log() { TypeId = (byte)action, UserId = user.Login, DateTime = DateTime.UtcNow, Description = description, EventId = eventId };
+            var log = new Log() { TypeId = (byte)action, UserId = user.Id, DateTime = DateTime.UtcNow, Description = description, EventId = eventId };
             await dbContext.Logs.AddAsync(log);
             await dbContext.SaveChangesAsync();
         }

@@ -2,7 +2,8 @@
 {
     public interface IAuthorizationService
     {
-        public (bool, string) Registration(string login, string password);
-        public (bool, string) Authorization(string login, string password);
+        public (ErrorMessage?, string) Registration(string login, string password);
+        public (ErrorMessage?, string, string) Authorization(string login, string password);
+        public (ErrorMessage?, string, string) RefreshJWTToken(string login, string jwtToken, string refreshToken);
     }
 }

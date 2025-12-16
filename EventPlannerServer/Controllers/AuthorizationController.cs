@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EventPlannerServer.Services;
 using EventPlannerLibrary;
-using EventPlannerLibrary.ResponseDTOs;
 using EventPlannerLibrary.RequestDTOs;
+using EventPlannerLibrary.SharedDTOs;
 
 namespace EventPlannerServer.Controllers
 {
@@ -20,34 +20,45 @@ namespace EventPlannerServer.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<ApiResponse<JWTResponse>>> Login(AuthorizationUserRequest request)
+        public async Task<ActionResult<ApiResponse<JwtDTO>>> Login(AuthorizationUserRequest requestData)
         {
-            if (!Validator<AuthorizationUserRequest>.IsValid(request))
-                return BadRequest(request);
-            return await Authorization(request);
+            if (!Validator<AuthorizationUserRequest>.IsValid(requestData))
+                return BadRequest(ApiResponse<JwtDTO>.Fail("Неккоректные данные", "400"));
+            return await Authorization(requestData);
         }
 
         [HttpPost("register")]
-        public async Task<ActionResult<ApiResponse<JWTResponse>>> Registration(AuthorizationUserRequest request)
+        public async Task<ActionResult<ApiResponse<JwtDTO>>> Registration(AuthorizationUserRequest requestData)
         {
-            if (!Validator<AuthorizationUserRequest>.IsValid(request))
-                return BadRequest(request);
-            var result = authorizationService.Registration(request.Login, request.Password);
-            if (!result.Item1)
-                return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
+            if (!Validator<AuthorizationUserRequest>.IsValid(requestData))
+                return BadRequest(requestData);
+            var result = authorizationService.Registration(requestData.Login, requestData.Password);
+            if (result.Item1 is not null)
+                return BadRequest(ApiResponse<JwtDTO>.Fail(result.Item1.Message, result.Item1.ErrorCode));
 
-            await loggerService.Log(request.Login, ActionTypes.Register, null, null);
-            return await Authorization(request);
+            await loggerService.Log(requestData.Login, ActionTypes.Register, null, null);
+            return await Authorization(requestData);
         }
 
-        private async Task<ActionResult<ApiResponse<JWTResponse>>> Authorization(AuthorizationUserRequest request)
+        [HttpPost("refresh")]
+        public async Task<ActionResult<ApiResponse<JwtDTO>>> Refresh(JwtDTO requestData)
         {
-            var result = authorizationService.Authorization(request.Login, request.Password);
-            if (!result.Item1)
-                return BadRequest(ApiResponse<JWTResponse>.Fail(result.Item2));
+            if (!Validator<JwtDTO>.IsValid(requestData))
+                return BadRequest(requestData);
+            var result = authorizationService.RefreshJWTToken(requestData.Login, requestData.JWT, requestData.Refresh!);
+            if (result.Item1 is not null)
+                return BadRequest(ApiResponse<JwtDTO>.Fail(result.Item1.Message, result.Item1.ErrorCode));
+            return Ok(ApiResponse<JwtDTO>.Ok(new() { Login = requestData.Login, JWT = result.Item2, Refresh = result.Item3 }));
+        }
 
-            loggerService.Log(request.Login, ActionTypes.Login, null, null);
-            return Ok(ApiResponse<JWTResponse>.Ok(new() { Login = request.Login, JWT = result.Item2 }));
+        private async Task<ActionResult<ApiResponse<JwtDTO>>> Authorization(AuthorizationUserRequest requestData)
+        {
+            var result = authorizationService.Authorization(requestData.Login, requestData.Password);
+            if (result.Item1 is not null)
+                return BadRequest(ApiResponse<JwtDTO>.Fail(result.Item1.Message, result.Item1.ErrorCode));
+
+            await loggerService.Log(requestData.Login, ActionTypes.Login, null, null);
+            return Ok(ApiResponse<JwtDTO>.Ok(new() { Login = requestData.Login, JWT = result.Item2, Refresh = result.Item3 }));
         }
     }
 }

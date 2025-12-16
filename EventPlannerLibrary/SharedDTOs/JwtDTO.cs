@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventPlannerLibrary.ResponseDTOs
+namespace EventPlannerLibrary.SharedDTOs
 {
-    public class JWTResponse
+    public class JwtDTO
     {
+        [Required]
         public string Login { get; set; }
+        [Required]
         public string JWT { get; set; }
+        public string? Refresh {  get; set; }
     }
 }
