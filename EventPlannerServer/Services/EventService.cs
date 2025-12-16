@@ -14,10 +14,8 @@ namespace EventPlannerServer.Services
             this.dbContext = dbContext;
         }
 
-        public (ErrorMessage?, List<EventDTO>?) GetEventsOfMonth(DateTime dateTime)
+        public (ErrorMessage?, List<EventDTO>?) GetEventsOfMonth(int year, int month)
         {
-            int year = dateTime.Year;
-            int month = dateTime.Month;
             if (year < 1900 || year > 2100 || month < 1 || month > 12)
                 return (new ErrorMessage() { Message = "Неккоректные данные", ErrorCode = "400" }, null);
 

@@ -10,6 +10,7 @@ namespace EventPlannerLibrary.SharedDTOs
     public class JwtDTO
     {
         [Required]
+        [StringLength(20, MinimumLength = 3)]
         public string Login { get; set; }
         [Required]
         public string JWT { get; set; }

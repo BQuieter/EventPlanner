@@ -31,7 +31,7 @@ namespace EventPlannerServer.Services
 
         public (ErrorMessage?, string, string) Authorization(string login, string password)
         {
-            var user = dbContext.Users.FirstOrDefault(user => user.Login == login && VerifyString(password, user.Password));
+            var user = dbContext.Users.ToList().FirstOrDefault(user => user.Login == login && VerifyString(password, user.Password));
             if (user is not null)
                 return (null, GetJWTToken(login), GetRefreshToken(user.Id));
             return (new() { Message = "Неправильный логин или пароль", ErrorCode = "401" }, string.Empty, string.Empty);
@@ -61,11 +61,12 @@ namespace EventPlannerServer.Services
         private string GetJWTToken(string login, IEnumerable<Claim>? expiredClaims = null)
         {
             var claims = expiredClaims is null ? new List<Claim> { new Claim(ClaimTypes.Name, login) } : expiredClaims;
+            Console.WriteLine(AuthOptions.Expires);
             var jwt = new JwtSecurityToken(
                     issuer: AuthOptions.ISSUER,
                     audience: AuthOptions.AUDIENCE,
                     claims: claims,
-                    expires: AuthOptions.EXPIRES,
+                    expires: AuthOptions.Expires,
                     signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
 
             return new JwtSecurityTokenHandler().WriteToken(jwt);

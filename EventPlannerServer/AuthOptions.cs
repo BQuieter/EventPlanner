@@ -7,7 +7,7 @@ namespace EventPlannerServer
     {
         public const string ISSUER = "EventPlannerServer"; 
         public const string AUDIENCE = "EventPlannerClient";
-        public static readonly DateTime EXPIRES = DateTime.UtcNow.AddMinutes(15);
+        public static DateTime Expires => DateTime.UtcNow.AddSeconds(5); //DateTime.UtcNow.AddMinutes(15);
         private const string KEY = "am12148!opqweasdsadsxvscsdfw2312412!!!sdasdsfdgdsgdsgfsdfsd";   
         public static SymmetricSecurityKey GetSymmetricSecurityKey() =>
             new SymmetricSecurityKey(Encoding.UTF8.GetBytes(KEY));

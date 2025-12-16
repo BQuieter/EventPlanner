@@ -22,11 +22,11 @@ namespace EventPlannerServer.Controllers
             this.loggerService = loggerService;
         }
 
-        [HttpGet("getevents")]
+        [HttpGet("getevents/{year}-{month}")]
         [Authorize]
-        public async Task<ActionResult<ApiResponse<List<EventDTO>>>> GetEventsOfMonth(DateTime dateRequest)
+        public async Task<ActionResult<ApiResponse<List<EventDTO>>>> GetEventsOfMonth(int year, int month)
         {
-            var result = eventService.GetEventsOfMonth(dateRequest);
+            var result = eventService.GetEventsOfMonth(year, month);
             if (result.Item1 is not null)
                 return BadRequest(ApiResponse<List<EventDTO>>.Fail(result.Item1.Message, result.Item1.ErrorCode));
             return Ok(ApiResponse<List<EventDTO>>.Ok(result.Item2!));
