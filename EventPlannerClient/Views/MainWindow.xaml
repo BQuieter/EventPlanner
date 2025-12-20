@@ -1,0 +1,45 @@
+﻿<Window x:Class="EventPlannerClient.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventPlannerClient.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        WindowStyle="None" Height="400" Width="800"
+        Title="MainWindow" Style="{DynamicResource WindowStyle}" >
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="8" CaptionHeight="32"/>
+    </WindowChrome.WindowChrome>
+    
+    <Window.Resources>
+        <ResourceDictionary Source="/ResourceDictionaries/Dark.xaml"/>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--Кастомный заголовок окна-->
+        <Grid Grid.Row="0" Style="{StaticResource WindowHeaderStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="32"/>
+                <ColumnDefinition Width="32"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="EventPlanner" VerticalAlignment="Center" Margin="10 0 0 0" Style="{StaticResource TextBlockStyle}"/>
+            <Button Grid.Column="1" Content="-" WindowChrome.IsHitTestVisibleInChrome="True" Command="{Binding MinimizeCommand}" Style="{StaticResource MinimizeButtonStyle}"/>
+            <Button Grid.Column="2" Content="X" WindowChrome.IsHitTestVisibleInChrome="True" Command="{Binding CloseCommand}" Style="{StaticResource CloseButtonStyle}"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="10 0 0 0" Style="{StaticResource TextBlockStyle}"/>
+        </Grid>
+    </Grid>
+</Window>
