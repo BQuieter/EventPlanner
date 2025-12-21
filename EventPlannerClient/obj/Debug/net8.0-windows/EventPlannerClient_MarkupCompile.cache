@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\App.xaml
-21980366261
+5-1366688646
 
-10494383990
-227-977407197
-ResourceDictionaries\Dark.xaml;Views\MainWindow.xaml;
+23677240273
+228586432995
+ResourceDictionaries\Dark.xaml;Views\Authorization.xaml;Views\CalendarEvents.xaml;Views\MainWindow.xaml;Views\Registration.xaml;
 
 False
 

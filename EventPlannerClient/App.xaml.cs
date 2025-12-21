@@ -30,10 +30,18 @@ namespace EventPlannerClient
         {
             //Сервисы
             services.AddSingleton<IValuesService, ValuesService>();
-            //Окна
+            services.AddSingleton<IApiService, ApiService>();
+            services.AddSingleton<IAuthorizationService, AuthorizationService>();
+            //Представления
             services.AddSingleton<MainWindow>();
+            services.AddTransient<CalendarEvents>();
+            services.AddTransient<Authorization>();
+            services.AddTransient<Registration>();
             //ViewModels
             services.AddTransient<MainWindowViewModel>();
+            services.AddTransient<CalendarEventsViewModel>();
+            services.AddTransient<AuthorizationViewModel>();
+            services.AddTransient<RegistrationViewModel>();
         }
 
         protected override async void OnStartup(StartupEventArgs e)

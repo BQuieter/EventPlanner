@@ -58,3 +58,12 @@ C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-wi
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\ResourceDictionaries\Dark.baml
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\CalendarEvents.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\CalendarEvents.baml
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\bin\Debug\net8.0-windows\EventPlannerLibrary.dll
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\bin\Debug\net8.0-windows\EventPlannerLibrary.pdb
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Authorization.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Authorization.baml
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Registration.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Registration.baml

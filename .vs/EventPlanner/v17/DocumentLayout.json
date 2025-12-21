@@ -11,38 +11,66 @@
       "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\valuesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\valuesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\views\\registration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\views\\registration.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\resourcedictionaries\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\resourcedictionaries\\dark.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\viewmodels\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\viewmodels\\registrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\iauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\views\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\views\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\viewmodels\\authorizationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\viewmodels\\authorizationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\viewmodels\\calendareventsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\viewmodels\\calendareventsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\viewmodels\\eventviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerserver\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C488F72B-05D8-477A-83A9-ECFBC0F6D376}|EventPlannerServer\\EventPlannerServer.csproj|solutionrelative:eventplannerserver\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|c:\\users\\bquiet\\source\\repos\\eventplanner\\eventplannerclient\\services\\valuesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D553FD70-6230-410F-AA5E-CD2D8D356DB6}|EventPlannerClient\\EventPlannerClient.csproj|solutionrelative:eventplannerclient\\services\\valuesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "DockedHeight": 565,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,14 +79,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\App.xaml.cs",
-              "RelativeDocumentMoniker": "EventPlannerClient\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\App.xaml.cs",
-              "RelativeToolTip": "EventPlannerClient\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwCEAAAAwAAAAAAAAAA==",
+              "Title": "Registration.xaml",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Views\\Registration.xaml",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Views\\Registration.xaml",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Views\\Registration.xaml",
+              "RelativeToolTip": "EventPlannerClient\\Views\\Registration.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-21T03:32:06.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistrationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\RegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\ViewModels\\RegistrationViewModel.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\RegistrationViewModel.cs",
+              "RelativeToolTip": "EventPlannerClient\\ViewModels\\RegistrationViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwBoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T01:52:33.832Z",
+              "WhenOpened": "2025-12-21T03:29:31.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthorizationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\AuthorizationViewModel.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\ViewModels\\AuthorizationViewModel.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\AuthorizationViewModel.cs",
+              "RelativeToolTip": "EventPlannerClient\\ViewModels\\AuthorizationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T23:32:49.651Z",
               "EditorCaption": ""
             },
             {
@@ -69,9 +122,9 @@
               "RelativeDocumentMoniker": "EventPlannerClient\\ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "EventPlannerClient\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEoAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T01:04:38.832Z",
+              "WhenOpened": "2025-12-21T03:10:43.175Z",
               "EditorCaption": ""
             },
             {
@@ -83,12 +136,37 @@
               "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Views\\MainWindow.xaml",
               "RelativeToolTip": "EventPlannerClient\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-20T01:00:38.167Z",
+              "WhenOpened": "2025-12-21T02:57:16.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "Authorization.xaml",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Views\\Authorization.xaml",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Views\\Authorization.xaml",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Views\\Authorization.xaml",
+              "RelativeToolTip": "EventPlannerClient\\Views\\Authorization.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-21T02:35:08.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\App.xaml.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\App.xaml.cs",
+              "RelativeToolTip": "EventPlannerClient\\App.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T01:52:33.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Dark.xaml",
               "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ResourceDictionaries\\Dark.xaml",
               "RelativeDocumentMoniker": "EventPlannerClient\\ResourceDictionaries\\Dark.xaml",
@@ -100,7 +178,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\ApiService.cs",
+              "RelativeToolTip": "EventPlannerClient\\Services\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T00:09:01.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\AuthorizationService.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Services\\AuthorizationService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\AuthorizationService.cs",
+              "RelativeToolTip": "EventPlannerClient\\Services\\AuthorizationService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T23:44:37.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\IAuthorizationService.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Services\\IAuthorizationService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\IAuthorizationService.cs",
+              "RelativeToolTip": "EventPlannerClient\\Services\\IAuthorizationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T23:39:39.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IApiService.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\IApiService.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\Services\\IApiService.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\IApiService.cs",
+              "RelativeToolTip": "EventPlannerClient\\Services\\IApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T00:13:17.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CalendarEventsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\CalendarEventsViewModel.cs",
+              "RelativeDocumentMoniker": "EventPlannerClient\\ViewModels\\CalendarEventsViewModel.cs",
+              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\CalendarEventsViewModel.cs",
+              "RelativeToolTip": "EventPlannerClient\\ViewModels\\CalendarEventsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T20:39:22.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ValuesService.cs",
               "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Services\\ValuesService.cs",
               "RelativeDocumentMoniker": "EventPlannerClient\\Services\\ValuesService.cs",
@@ -108,50 +251,24 @@
               "RelativeToolTip": "EventPlannerClient\\Services\\ValuesService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAB8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T21:14:20.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-19T21:14:20.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "EventViewModel.cs",
               "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\EventViewModel.cs",
               "RelativeDocumentMoniker": "EventPlannerClient\\ViewModels\\EventViewModel.cs",
               "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\ViewModels\\EventViewModel.cs",
               "RelativeToolTip": "EventPlannerClient\\ViewModels\\EventViewModel.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAswHMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswHMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T19:49:11.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "EventPlannerClient\\Models\\Event.cs",
-              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerClient\\Models\\Event.cs",
-              "RelativeToolTip": "EventPlannerClient\\Models\\Event.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T01:09:50.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "EventPlannerServer\\Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\BQuiet\\source\\repos\\EventPlanner\\EventPlannerServer\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "EventPlannerServer\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:20:43.196Z"
+              "WhenOpened": "2025-12-19T19:49:11.725Z"
             }
           ]
         },
         {
-          "DockedWidth": 1062,
+          "DockedHeight": 63,
           "SelectedChildIndex": -1,
           "Children": [
             {

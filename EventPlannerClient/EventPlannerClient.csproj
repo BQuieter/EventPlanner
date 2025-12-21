@@ -18,4 +18,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EventPlannerLibrary\EventPlannerLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

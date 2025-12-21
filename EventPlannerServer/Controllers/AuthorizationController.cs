@@ -45,10 +45,10 @@ namespace EventPlannerServer.Controllers
         {
             if (!Validator<JwtDTO>.IsValid(requestData))
                 return BadRequest(requestData);
-            var result = authorizationService.RefreshJWTToken(requestData.Login, requestData.JWT, requestData.Refresh!);
+            var result = authorizationService.RefreshJWTToken(requestData.JWT, requestData.Refresh!);
             if (result.Item1 is not null)
                 return BadRequest(ApiResponse<JwtDTO>.Fail(result.Item1.Message, result.Item1.ErrorCode));
-            return Ok(ApiResponse<JwtDTO>.Ok(new() { Login = requestData.Login, JWT = result.Item2, Refresh = result.Item3 }));
+            return Ok(ApiResponse<JwtDTO>.Ok(new() { JWT = result.Item2, Refresh = result.Item3 }));
         }
 
         private async Task<ActionResult<ApiResponse<JwtDTO>>> Authorization(AuthorizationUserRequest requestData)

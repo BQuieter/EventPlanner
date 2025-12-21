@@ -37,8 +37,12 @@ namespace EventPlannerServer.Services
             return (new() { Message = "Неправильный логин или пароль", ErrorCode = "401" }, string.Empty, string.Empty);
         }
 
-        public (ErrorMessage?, string, string) RefreshJWTToken(string login, string jwtToken, string refreshToken)
+        public (ErrorMessage?, string, string) RefreshJWTToken(string jwtToken, string refreshToken)
         {
+            var claims = GetPrincipalFromExpiredToken(jwtToken).Claims;
+            if (claims is null || claims.Count() == 0)
+                return (new ErrorMessage() { Message = "Что-то не так с прошлым токеном", ErrorCode = "403" }, string.Empty, string.Empty);
+            string login = claims.FirstOrDefault(c => c.ValueType == ClaimTypes.Name).Value;
             var user = dbContext.Users.Include(user => user.RefreshTokens).FirstOrDefault(user => user.Login == login);
             if (user is null)
                 return (new() { Message = "Пользователь с таким логином не найден", ErrorCode = "401" }, string.Empty, string.Empty);
@@ -50,9 +54,6 @@ namespace EventPlannerServer.Services
             if (DateTime.Compare(DateTime.UtcNow, tokenInDb.ExpiredAt) > 0)
                 return (new ErrorMessage() { Message = "Время функционирования токена обновления закончилось", ErrorCode = "403" }, string.Empty, string.Empty);
             
-            var claims = GetPrincipalFromExpiredToken(jwtToken).Claims;
-            if (claims is null)
-                return (new ErrorMessage() { Message = "Что-то не так с прошлым токеном", ErrorCode = "403" }, string.Empty, string.Empty);
             var newJwtToken = GetJWTToken(login, claims);
             var newRefreshToken = GetRefreshToken(user.Id);
             return (null, newJwtToken, newRefreshToken);

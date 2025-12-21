@@ -30,8 +30,4 @@
     <ProjectReference Include="..\EventPlannerLibrary\EventPlannerLibrary.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models2\" />
-  </ItemGroup>
-
 </Project>
