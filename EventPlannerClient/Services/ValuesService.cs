@@ -7,7 +7,7 @@ using System.Windows.Navigation;
 
 namespace EventPlannerClient.Services
 {
-    internal class ValuesService: IValuesService
+    public class ValuesService: IValuesService
     {
         //Для теста явно указал
         private Dictionary<byte, string> importancePairs = new() { { 1, "Незначительно"}, { 2, "Обычно" }, { 3, "Важно" }, { 4, "Критически важно" }, { 5, "Жизненно важно" } };

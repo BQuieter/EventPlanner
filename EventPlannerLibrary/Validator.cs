@@ -13,7 +13,7 @@ namespace EventPlannerLibrary
         {
             var context = new ValidationContext(Object);
             var results = new List<ValidationResult>();
-            return Validator.TryValidateObject(Object, context, results);
+            return Validator.TryValidateObject(Object, context, results, validateAllProperties: true);
         }
     }
 }

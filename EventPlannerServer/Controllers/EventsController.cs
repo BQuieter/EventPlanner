@@ -37,7 +37,7 @@ namespace EventPlannerServer.Controllers
         public async Task<ActionResult<ApiResponse<EventDTO>>> CreateEvent(EventDTO eventData, HttpContext httpContext)
         {
             if (!Validator<EventDTO>.IsValid(eventData))
-                return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", "400"));
+                return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", 400));
             string user = httpContext.User.Identity!.Name!;
             var result = eventService.CreateEvent(eventData, user);
             if (result.Item1 is not null)
@@ -52,9 +52,9 @@ namespace EventPlannerServer.Controllers
         {
             foreach(EventDTO eventDTO in eventDataList)
                 if (!Validator<EventDTO>.IsValid(eventDTO))
-                    return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", "400"));
+                    return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", 400));
             if (eventDataList.Count != 2)
-                return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", "400"));
+                return BadRequest(ApiResponse<EventDTO>.Fail("Неккоректные данные", 400));
 
             string user = httpContext.User.Identity!.Name!;
             var result = eventService.EditEvent(eventDataList[0], eventDataList[1], user);

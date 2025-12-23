@@ -11,8 +11,38 @@
     </UserControl.Resources>
     
     <Grid>
-        <Viewbox Height="300" Width="250">
-            <Calendar CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle}" CalendarButtonStyle="{DynamicResource CalendarCalendarButtonStyle}" Style="{DynamicResource CalendarStyle}" />
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0" VerticalAlignment="Top">
+            <Calendar SelectedDate="{Binding Date}" CalendarItemStyle="{DynamicResource CalendarCalendarItemStyle}" CalendarDayButtonStyle="{DynamicResource CalendarCalendarDayButtonStyle}" CalendarButtonStyle="{DynamicResource CalendarCalendarButtonStyle}" Style="{DynamicResource CalendarStyle}" />
         </Viewbox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox ItemsSource="{Binding Events}" Style="{DynamicResource ListBoxStyle}" Margin="0 10 0 10" Grid.Column="1" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding TimeString}" Style="{StaticResource ListBoxTextBlock}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding OwnerLogin}" Style="{StaticResource ListBoxTextBlock}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding ImportanceString}" Style="{StaticResource ListBoxTextBlock}"/>
+                            <TextBlock Grid.Column="3" Text="{Binding Description}" Style="{StaticResource ListBoxTextBlock}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
     </Grid>
 </UserControl>

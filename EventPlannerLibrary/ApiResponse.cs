@@ -11,12 +11,12 @@ namespace EventPlannerLibrary
         public bool Success { get; set; }
         public T? Data { get; set; }
         public string? Error { get; set; }
-        public string? ErrorCode { get; set; }
+        public int? ErrorCode { get; set; }
 
         public static ApiResponse<T> Ok(T data) =>
             new() {Success = true, Data = data };
 
-        public static ApiResponse<T> Fail(string error, string errorCode) =>
+        public static ApiResponse<T> Fail(string error, int errorCode) =>
             new() {Success = false, Error = error, ErrorCode = errorCode };
     }
 }

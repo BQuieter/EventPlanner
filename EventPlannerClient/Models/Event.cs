@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventPlannerClient.Models
 {
-    internal class Event
+    public class Event
     {
         public int Id { get; set; }
         public string OwnerLogin { get; set; }

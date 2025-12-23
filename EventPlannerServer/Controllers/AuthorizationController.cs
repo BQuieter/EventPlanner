@@ -23,7 +23,7 @@ namespace EventPlannerServer.Controllers
         public async Task<ActionResult<ApiResponse<JwtDTO>>> Login(AuthorizationUserRequest requestData)
         {
             if (!Validator<AuthorizationUserRequest>.IsValid(requestData))
-                return BadRequest(ApiResponse<JwtDTO>.Fail("Неккоректные данные", "400"));
+                return BadRequest(ApiResponse<JwtDTO>.Fail("Неккоректные данные", 400));
             return await Authorization(requestData);
         }
 

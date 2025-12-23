@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -26,23 +27,32 @@ namespace EventPlannerClient.Services
 
         public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            var response = await _httpClient.SendAsync(request, cancellationToken);
-
-            if (response.StatusCode == HttpStatusCode.Unauthorized && _refreshToken is not null)
+            HttpResponseMessage? response;
+            try
             {
-                try
+                response = await _httpClient.SendAsync(request, cancellationToken);
+
+                if (response.StatusCode == HttpStatusCode.Unauthorized && _refreshToken is not null)
                 {
-                    await _refreshLock.WaitAsync(cancellationToken);
-                    var refreshSuccess = await RefreshTokenAsync();
-                    if (refreshSuccess)
-                        response = await _httpClient.SendAsync(request, cancellationToken);
+                    try
+                    {
+                        await _refreshLock.WaitAsync(cancellationToken);
+                        var refreshSuccess = await RefreshTokenAsync();
+                        if (refreshSuccess)
+                            response = await _httpClient.SendAsync(request, cancellationToken);
+                    }
+                    finally
+                    {
+                        _refreshLock.Release();
+                    }
                 }
-                finally
-                {
-                    _refreshLock.Release();
-                }
+                return response;
             }
-            return response;
+            catch (Exception ex) 
+            {
+                Debug.WriteLine(ex.Message);
+                return new HttpResponseMessage() { StatusCode = HttpStatusCode.ServiceUnavailable };
+            }
         }
        
         public void SetTokens(string jwt, string refreshToken)

@@ -17,7 +17,7 @@ namespace EventPlannerServer.Services
         public (ErrorMessage?, List<EventDTO>?) GetEventsOfMonth(int year, int month)
         {
             if (year < 1900 || year > 2100 || month < 1 || month > 12)
-                return (new ErrorMessage() { Message = "Неккоректные данные", ErrorCode = "400" }, null);
+                return (new ErrorMessage() { Message = "Неккоректные данные", ErrorCode = 400 }, null);
 
             List<EventDTO> events = dbContext.Events
                 .Where((evnt) => (evnt.DateTime.Year == year) && (evnt.DateTime.Month == month))
@@ -30,7 +30,7 @@ namespace EventPlannerServer.Services
                                     User = evnt.User.Login 
                 }).ToList();
             if (events is null)
-                return (new ErrorMessage() { Message = "Произошла непредвиденная ошибка", ErrorCode = "500" }, null);
+                return (new ErrorMessage() { Message = "Произошла непредвиденная ошибка", ErrorCode = 500 }, null);
             return (null, events);
         }
 
@@ -38,7 +38,7 @@ namespace EventPlannerServer.Services
         {
             User user = dbContext.Users.FirstOrDefault(u => u.Login == login);
             if (user is null)
-                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = "400" }, null);
+                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = 400 }, null);
 
             Event eventMapped  = new() { UserId = user.Id, DateTime = eventData.DateTime, Description = eventData.Event, ImportanceId = eventData.Importance};
             dbContext.Events.Add(eventMapped);
@@ -56,13 +56,13 @@ namespace EventPlannerServer.Services
         {
             User user = dbContext.Users.FirstOrDefault(u => u.Login == login);
             if (user is null)
-                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = "400" }, null);
+                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = 400 }, null);
 
             Event eventInDb = dbContext.Events.Include(e => e.User).FirstOrDefault(e => e.Description == eventToFind.Event && e.DateTime == eventToFind.DateTime && e.ImportanceId == eventToFind.Importance && e.UserId == eventToFind.Id);
             if (eventInDb is null)
-                return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = "500" }, null);
+                return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = 500 }, null);
             if (eventInDb.UserId != user.Id)
-                return (new ErrorMessage() { Message = "Нет доступа для изменения", ErrorCode = "401" }, null);
+                return (new ErrorMessage() { Message = "Нет доступа для изменения", ErrorCode = 401 }, null);
             eventInDb.DateTime = eventData.DateTime;
             eventInDb.Description = eventData.Event;
             eventInDb.ImportanceId = eventData.Importance;
@@ -79,13 +79,13 @@ namespace EventPlannerServer.Services
         {
             User user = dbContext.Users.FirstOrDefault(u => u.Login == login);
             if (user is null)
-                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = "400" }, false);
+                return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = 400 }, false);
 
             Event eventInDb = dbContext.Events.FirstOrDefault(e => e.Description == eventData.Event && e.DateTime == eventData.DateTime && e.ImportanceId == eventData.Importance && e.UserId == eventData.Id);
             if (eventInDb is null)
-                return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = "500" }, false);
+                return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = 500 }, false);
             if (eventInDb.UserId != user.Id)
-                return (new ErrorMessage() { Message = "Нет доступа для удаления", ErrorCode = "401" }, false);
+                return (new ErrorMessage() { Message = "Нет доступа для удаления", ErrorCode = 401 }, false);
             dbContext.Events.Remove(eventInDb);
             dbContext.SaveChanges(true);
             return (null, true);

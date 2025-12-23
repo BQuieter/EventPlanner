@@ -9,7 +9,7 @@ using System.Windows.Data;
 
 namespace EventPlannerClient.Converters
 {
-    public class BoolToVisibilityConverter: IValueConverter
+    public class BoolToVisibilityConverterC: IValueConverter
     {
         public bool IsReversed { get; set; }
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -18,6 +18,28 @@ namespace EventPlannerClient.Converters
                 return (IsReversed ? !boolValue : boolValue) ? Visibility.Visible : Visibility.Collapsed;
 
             return Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is Visibility visibility)
+            {
+                bool result = visibility == Visibility.Visible;
+                return result;
+            }
+
+            return false;
+        }
+    }
+    public class BoolToVisibilityConverterH : IValueConverter
+    {
+        public bool IsReversed { get; set; }
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is bool boolValue)
+                return (IsReversed ? !boolValue : boolValue) ? Visibility.Visible : Visibility.Hidden;
+
+            return Visibility.Hidden;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

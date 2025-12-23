@@ -21,7 +21,7 @@ namespace EventPlannerServer.Services
         public (ErrorMessage?, string) Registration(string login, string password)
         {
             if (dbContext.Users.ToList<User>().Find((user) => user.Login == login) != null)
-                return (new() { Message = "Пользователь с данным логином уже существует", ErrorCode = "409" }, string.Empty);
+                return (new() { Message = "Пользователь с данным логином уже существует", ErrorCode = 409 }, string.Empty);
             var user = new User() { Login = login, Password = HashString(password)};
             dbContext.Users.Add(user);
             dbContext.SaveChanges();
@@ -34,25 +34,25 @@ namespace EventPlannerServer.Services
             var user = dbContext.Users.ToList().FirstOrDefault(user => user.Login == login && VerifyString(password, user.Password));
             if (user is not null)
                 return (null, GetJWTToken(login), GetRefreshToken(user.Id));
-            return (new() { Message = "Неправильный логин или пароль", ErrorCode = "401" }, string.Empty, string.Empty);
+            return (new() { Message = "Неправильный логин или пароль", ErrorCode = 401 }, string.Empty, string.Empty);
         }
 
         public (ErrorMessage?, string, string) RefreshJWTToken(string jwtToken, string refreshToken)
         {
             var claims = GetPrincipalFromExpiredToken(jwtToken).Claims;
             if (claims is null || claims.Count() == 0)
-                return (new ErrorMessage() { Message = "Что-то не так с прошлым токеном", ErrorCode = "403" }, string.Empty, string.Empty);
+                return (new ErrorMessage() { Message = "Что-то не так с прошлым токеном", ErrorCode = 403 }, string.Empty, string.Empty);
             string login = claims.FirstOrDefault(c => c.ValueType == ClaimTypes.Name).Value;
             var user = dbContext.Users.Include(user => user.RefreshTokens).FirstOrDefault(user => user.Login == login);
             if (user is null)
-                return (new() { Message = "Пользователь с таким логином не найден", ErrorCode = "401" }, string.Empty, string.Empty);
+                return (new() { Message = "Пользователь с таким логином не найден", ErrorCode = 401 }, string.Empty, string.Empty);
             RefreshToken tokenInDb = user.RefreshTokens.First();
             if (tokenInDb is null)
-                return (new ErrorMessage() { Message = "Не существует токена обновления для данного пользователя", ErrorCode = "401" }, string.Empty, string.Empty);
+                return (new ErrorMessage() { Message = "Не существует токена обновления для данного пользователя", ErrorCode = 401 }, string.Empty, string.Empty);
             if (!VerifyString(refreshToken, tokenInDb.Token))
-                return (new ErrorMessage() { Message = "Неверный токен обновления", ErrorCode = "401" }, string.Empty, string.Empty);
+                return (new ErrorMessage() { Message = "Неверный токен обновления", ErrorCode = 401 }, string.Empty, string.Empty);
             if (DateTime.Compare(DateTime.UtcNow, tokenInDb.ExpiredAt) > 0)
-                return (new ErrorMessage() { Message = "Время функционирования токена обновления закончилось", ErrorCode = "403" }, string.Empty, string.Empty);
+                return (new ErrorMessage() { Message = "Время функционирования токена обновления закончилось", ErrorCode = 403 }, string.Empty, string.Empty);
             
             var newJwtToken = GetJWTToken(login, claims);
             var newRefreshToken = GetRefreshToken(user.Id);

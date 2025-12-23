@@ -20,8 +20,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ResourceDictionaries/Dark.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <converters:BoolToVisibilityConverter x:Key="BoolToVisibility" IsReversed="False"/>
-            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityReversed" IsReversed="True"/>
+            <converters:BoolToVisibilityConverterC x:Key="BoolToVisibility" IsReversed="False"/>
+            <converters:BoolToVisibilityConverterC x:Key="BoolToVisibilityReversed" IsReversed="True"/>
             <DataTemplate DataType="{x:Type viewModels:CalendarEventsViewModel}">
                 <local:CalendarEvents/>
             </DataTemplate>

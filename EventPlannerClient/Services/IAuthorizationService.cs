@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EventPlannerLibrary;
+using EventPlannerLibrary.SharedDTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +12,8 @@ namespace EventPlannerClient.Services
     {
         public string Login {get; }
         public event Action Authorized;
-        public Task<bool> Authorize(string login, string password);
-        public Task<bool> Register(string login, string password, string confirmPassword);
+        public Task<ServiceResponse<string?>> Authorize(string login, string password);
+        public Task<ServiceResponse<string?>> Register(string login, string password, string confirmPassword);
         public void Logout();
 
 

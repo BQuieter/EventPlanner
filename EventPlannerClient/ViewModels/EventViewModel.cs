@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EventPlannerClient.ViewModels
 {
-    internal class EventViewModel : INotifyPropertyChanged
+    public class EventViewModel : INotifyPropertyChanged
     {
         private Event _event;
         private string _timeString;
