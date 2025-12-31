@@ -8,6 +8,7 @@ namespace EventPlannerClient.Services
 {
     public interface IValuesService
     {
+        public List<string> GetImportancesList();
         public bool TryGetImportanceString(byte importanceId, out string importanceString);
         public bool TryGetImportanceId(string inmportanceString, out byte importanceId);
     }

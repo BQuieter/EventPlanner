@@ -30,6 +30,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         };
 });
 builder.Services.AddAuthorization(); 
+builder.Services.AddMemoryCache();
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<EventPlannerDbContext>(options => options.UseSqlServer(connection));
 

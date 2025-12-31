@@ -22,6 +22,8 @@ namespace EventPlannerClient.ViewModels
         {
             this._event = _event;
             this._valuesService = valuesService;
+            SetImportanceString(_event.Importance);
+
         }
         public DateTime EventDateTime
         {
@@ -42,7 +44,7 @@ namespace EventPlannerClient.ViewModels
             get => _event.DateTime.ToString("t");
             set
             {
-                if (_timeString != value && DateTime.TryParseExact(value, "d", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDateTime))
+                if (_timeString != value && DateTime.TryParseExact(value, "t", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDateTime))
                 {
                     _timeString = value;
                     EventDateTime = new DateTime(EventDateTime.Year, EventDateTime.Month, EventDateTime.Day, parsedDateTime.Hour, parsedDateTime.Minute, 0);
@@ -84,11 +86,7 @@ namespace EventPlannerClient.ViewModels
                 if (_event.Importance != value)
                 {
                     _event.Importance = value;
-                    if (_valuesService.TryGetImportanceString(value, out string importanceString))
-                    {
-                        ImportanceString = importanceString;
-                        OnPropertyChanged(nameof(ImportanceString));
-                    }
+                    SetImportanceString(value);
 
                     OnPropertyChanged(nameof(Importance));
                 }
@@ -105,6 +103,33 @@ namespace EventPlannerClient.ViewModels
                     _importanceString = value;
                     OnPropertyChanged(nameof(ImportanceString));
                 }
+            }
+        }
+        public Event GetEvent()
+        {
+            return _event;
+        }
+        public void SetEvent(Event eventData)
+        {
+            _event = eventData;
+            OnPropertyChanged(nameof(EventDateTime));
+            OnPropertyChanged(nameof(TimeString));
+            OnPropertyChanged(nameof(OwnerLogin));
+            OnPropertyChanged(nameof(Description));
+            OnPropertyChanged(nameof(Importance));
+            SetImportanceString(Importance);
+        }
+        public EventViewModel GetCopy()
+        {
+            var newEvent = new Event() { DateTime = this._event.DateTime, Description = this._event.Description, Id = this._event.Id, Importance = this._event.Importance, OwnerLogin = this._event.OwnerLogin };
+            return new EventViewModel(newEvent, _valuesService) { Description = this.Description, Importance = this.Importance, EventDateTime = this.EventDateTime, ImportanceString = this.ImportanceString, TimeString = this.TimeString, OwnerLogin = this.OwnerLogin };
+        }
+        private void SetImportanceString(byte id)
+        {
+            if (_valuesService.TryGetImportanceString(id, out string importanceString))
+            {
+                ImportanceString = importanceString;
+                OnPropertyChanged(nameof(ImportanceString));
             }
         }
 

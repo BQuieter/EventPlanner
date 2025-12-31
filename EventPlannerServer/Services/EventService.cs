@@ -14,13 +14,13 @@ namespace EventPlannerServer.Services
             this.dbContext = dbContext;
         }
 
-        public (ErrorMessage?, List<EventDTO>?) GetEventsOfMonth(int year, int month)
+        public (ErrorMessage?, List<EventDTO>?) GetEventsOfDay(int year, int month, int day)
         {
-            if (year < 1900 || year > 2100 || month < 1 || month > 12)
+            if (year < 1900 || year > 2100 || month < 1 || month > 12 || day < 1 || day > 31)
                 return (new ErrorMessage() { Message = "Неккоректные данные", ErrorCode = 400 }, null);
 
             List<EventDTO> events = dbContext.Events
-                .Where((evnt) => (evnt.DateTime.Year == year) && (evnt.DateTime.Month == month))
+                .Where((evnt) => (evnt.DateTime.Year == year) && (evnt.DateTime.Month == month) && (evnt.DateTime.Day == day))
                 .OrderBy((evnt) => evnt.DateTime)
                 .Select((evnt) => new EventDTO() {
                                     Id = evnt.Id,
@@ -52,13 +52,13 @@ namespace EventPlannerServer.Services
 
         }
 
-        public (ErrorMessage?, EventDTO?) EditEvent(EventDTO eventToFind, EventDTO eventData, string login)
+        public (ErrorMessage?, EventDTO?) EditEvent(EventDTO eventData, string login)
         {
             User user = dbContext.Users.FirstOrDefault(u => u.Login == login);
             if (user is null)
                 return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = 400 }, null);
 
-            Event eventInDb = dbContext.Events.Include(e => e.User).FirstOrDefault(e => e.Description == eventToFind.Event && e.DateTime == eventToFind.DateTime && e.ImportanceId == eventToFind.Importance && e.UserId == eventToFind.Id);
+            Event eventInDb = dbContext.Events.Include(e => e.User).FirstOrDefault(e =>e.Id == eventData.Id);
             if (eventInDb is null)
                 return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = 500 }, null);
             if (eventInDb.UserId != user.Id)
@@ -81,7 +81,7 @@ namespace EventPlannerServer.Services
             if (user is null)
                 return (new ErrorMessage() { Message = "Пользователь не найден", ErrorCode = 400 }, false);
 
-            Event eventInDb = dbContext.Events.FirstOrDefault(e => e.Description == eventData.Event && e.DateTime == eventData.DateTime && e.ImportanceId == eventData.Importance && e.UserId == eventData.Id);
+            Event eventInDb = dbContext.Events.FirstOrDefault(e => e.Id == eventData.Id);
             if (eventInDb is null)
                 return (new ErrorMessage() { Message = "Событие не найдено", ErrorCode = 500 }, false);
             if (eventInDb.UserId != user.Id)

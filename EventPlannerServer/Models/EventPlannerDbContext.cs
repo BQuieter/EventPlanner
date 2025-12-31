@@ -74,6 +74,7 @@ public partial class EventPlannerDbContext : DbContext
 
             entity.HasOne(d => d.Event).WithMany(p => p.Logs)
                 .HasForeignKey(d => d.EventId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Logs__EventId__72C60C4A");
 
             entity.HasOne(d => d.Type).WithMany(p => p.Logs)

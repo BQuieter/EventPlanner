@@ -67,3 +67,7 @@ C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-wi
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Authorization.baml
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Registration.g.cs
 C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\Registration.baml
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\EventView.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\EventView.baml
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\EventCreate.g.cs
+C:\Users\BQuiet\source\repos\EventPlanner\EventPlannerClient\obj\Debug\net8.0-windows\Views\EventCreate.baml

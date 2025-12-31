@@ -8,6 +8,12 @@
     <Compile Update="Views\CalendarEvents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EventCreate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EventView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
